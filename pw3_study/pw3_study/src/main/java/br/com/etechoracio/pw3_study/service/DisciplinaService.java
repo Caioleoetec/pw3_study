@@ -5,12 +5,14 @@ import br.com.etechoracio.pw3_study.entity.Disciplina;
 import br.com.etechoracio.pw3_study.repository.DisciplinaRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class DisciplinaService {
-    @Autowired
+    @Autowired //injeção de dependencia; digo que o spring que vai instanciar o serviço
     private DisciplinaRepository repository;
     private ModelMapper modelMapper = new ModelMapper();
     public List<DisciplinaResponseDTO> listar(){
