@@ -12,4 +12,5 @@ public class Conexao {
     @Column(name = "ID_CONEXAO")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private Monitor monitor;
 }
