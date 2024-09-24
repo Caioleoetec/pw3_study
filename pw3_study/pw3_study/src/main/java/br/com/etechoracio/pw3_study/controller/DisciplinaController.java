@@ -16,6 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/disciplinas")
+@CrossOrigin(origins = "*") //determina quais portas (ou nome de dominio) estão aptos a serem usados
 public class DisciplinaController {
     @Autowired
     private DisciplinaService service;
